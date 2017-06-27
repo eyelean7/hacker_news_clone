@@ -1,8 +1,8 @@
 
 <h1>Posts</h1>
 
-<ul>
+<ol>
   <% @posts.each do |post| %>
-    <li><%= post.url %></li>
+    <li><%= link_to post.url, post.url %></li>
   <% end %>
-</ul>
+</ol>
