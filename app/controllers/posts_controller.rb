@@ -16,6 +16,14 @@ class PostsController < ApplicationController
       render :new
     end
   end
+  def show
+    @post = Post.find(params[:id])
+    redirect_to new_post_comment_path(@post)
+  end
+
+
+
+
 private
   def post_params
     params.require(:post).permit(:title, :url)
